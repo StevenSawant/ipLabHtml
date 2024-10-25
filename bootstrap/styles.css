@@ -1,0 +1,14 @@
+.hero-img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .review-input {
+    width: 100%;
+  }
+  
+  .about-img, .contact-img {
+    max-width: 50%;
+    height: auto;
+  }
+  

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Review Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Book Review Hub</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#books">Books</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-text">
+      <h2>Discover and Review Your Favorite Books</h2>
+      <p>Join our community of book lovers. Review classics, discover hidden gems, and share your thoughts. **Here's a larger paragraph for your book review website's hero section:**
+
+        "**Lose yourself in the pages of a great book.** Our website is your ultimate destination for insightful and engaging book reviews. Discover new authors, explore different genres, and find your next literary obsession. Whether you're a seasoned reader or just starting your bookish journey, we've got you covered. Our expert reviews offer honest assessments, thought-provoking analysis, and personalized recommendations. Join our vibrant community of book lovers and share your passion for storytelling.
+        </p>
+    </div>
+    <img src="./image.png" alt="Books" class="hero-img">
+  </section>
+
+  <!-- Books Section -->
+  <section id="books">
+    <h2>Books to Review</h2>
+    <div class="book">
+      <h3>JavaScript Essentials</h3>
+      <p class="reviews"></p>
+      <input type="text" placeholder="Add your review" class="review-input">
+      <button onclick="submitReview(this)">Submit Review</button>
+    </div>
+
+    <h3>Add a New Book</h3>
+    <input type="text" id="new-book-title" placeholder="Book Title">
+    <button onclick="addBook()">Add Book</button>
+    <div id="new-books"></div>
+
+    <!-- Calculator Section -->
+    <h3>Calculator</h3>
+    <input type="text" id="calc-display" placeholder="0" readonly>
+    <div class="calculator">
+      <button onclick="appendCalc('7')">7</button>
+      <button onclick="appendCalc('8')">8</button>
+      <button onclick="appendCalc('9')">9</button>
+      <button onclick="appendCalc('/')">/</button>
+      <button onclick="appendCalc('4')">4</button>
+      <button onclick="appendCalc('5')">5</button>
+      <button onclick="appendCalc('6')">6</button>
+      <button onclick="appendCalc('*')">*</button>
+      <button onclick="appendCalc('1')">1</button>
+      <button onclick="appendCalc('2')">2</button>
+      <button onclick="appendCalc('3')">3</button>
+      <button onclick="appendCalc('-')">-</button>
+      <button onclick="clearCalc()">C</button>
+      <button onclick="appendCalc('0')">0</button>
+      <button onclick="calculateResult()">=</button>
+      <button onclick="appendCalc('+')">+</button>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <img src="./about.png" alt="Team Photo" class="about-img">
+    <p>We are passionate about books and aim to create a platform for readers to share their reviews.</p>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <img src="./contact.jpg" alt="Office Location" class="contact-img">
+    <p>Email: contact@bookreviewhub.com</p>
+    <p>Phone: +123-456-7890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Book Review Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

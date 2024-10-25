@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Review Hub</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-dark text-white text-center py-3">
+    <h1>Book Review Hub</h1>
+    <nav>
+      <a href="#hero" class="text-white me-3">Home</a>
+      <a href="#books" class="text-white me-3">Books</a>
+      <a href="#about" class="text-white me-3">About Us</a>
+      <a href="#contact" class="text-white">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="d-flex align-items-center bg-light p-5">
+    <div class="text-start w-50">
+      <h2>Discover and Review Your Favorite Books</h2>
+      <p>Join our community of book lovers. Review classics, discover hidden gems, and share your thoughts.</p>
+    </div>
+    <img src="./image.png" alt="Books" class="img-fluid rounded w-50">
+  </section>
+
+  <!-- Books Section -->
+  <section id="books" class="container my-5">
+    <h2 class="text-center mb-4">Books to Review</h2>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h3 class="card-title">JavaScript Essentials</h3>
+        <div class="reviews mb-3"></div>
+        <input type="text" class="form-control mb-2 review-input" placeholder="Add your review">
+        <button class="btn btn-primary" onclick="submitReview(this)">Submit Review</button>
+      </div>
+    </div>
+
+    <h3 class="text-center my-4">Add a New Book</h3>
+    <div class="input-group mb-3">
+      <input type="text" id="new-book-title" class="form-control" placeholder="Book Title">
+      <button class="btn btn-success" onclick="addBook()">Add Book</button>
+    </div>
+
+    <div id="new-books"></div>
+
+    <!-- Calculator Section -->
+    <h3 class="text-center my-4">Calculator</h3>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <input type="text" id="calc-display" class="form-control text-end mb-3" placeholder="0" readonly>
+          <div class="row g-2">
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('7')">7</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('8')">8</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('9')">9</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('/')">/</button></div>
+
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('4')">4</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('5')">5</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('6')">6</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('*')">*</button></div>
+
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('1')">1</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('2')">2</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('3')">3</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('-')">-</button></div>
+
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="clearCalc()">C</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('0')">0</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="calculateResult()">=</button></div>
+            <div class="col-3"><button class="btn btn-secondary w-100" onclick="appendCalc('+')">+</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- About Us -->
+  <section id="about" class="container my-5">
+    <h2 class="text-center mb-4">About Us</h2>
+    <img src="./about.png" alt="Team Photo" class="img-fluid rounded mx-auto d-block mb-3 about-img">
+    <p>We are passionate about books and aim to create a platform for readers to share their reviews.</p>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <img src="./contact.jpg" alt="Office Location" class="img-fluid rounded mx-auto d-block mb-3 contact-img">
+    <p>Email: contact@bookreviewhub.com</p>
+    <p>Phone: +123-456-7890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Book Review Hub. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
